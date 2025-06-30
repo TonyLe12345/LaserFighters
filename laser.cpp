@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <math.h>
 using namespace sf;
 #include "laser.h"
 
@@ -31,9 +32,9 @@ bool laser::isFired() {
 
 void laser::move(int num) {
     if (num<500) {
-        shape->move(0,0.5);
+        shape->move(0,4);
     } else {
-        shape->move(0,-0.5);
+        shape->move(0,-4);
     }    
 }
 
@@ -78,3 +79,8 @@ void laser::reset() {
 void laser::reset_position(int x, int y) {
     shape->setPosition(x,y);
 };
+
+
+laser::~laser() {
+    delete shape;
+}

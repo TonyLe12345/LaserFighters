@@ -1,41 +1,18 @@
-#include <SFML/Graphics.hpp>
+#pragma once
+
 #include "player.h"
 
-
-using namespace sf;
-
 class Ship : public player {
-    private:
-    int hp = 0;
-    int spd;
+public:
+    Ship(GameDataRef data, int r, int x, int y, int HP_x, int HP_y, const std::string& texturePath, bool isFlipped, int health, int speed, int fireRate);
+
+    void setSpeed(int speed);
+    int getSpeed() const override;
+
+    void setFireRate(int fireRate);
+    int getFireRate() const;
+
+protected:
+    int speed;
     int fireRate;
-
-    public:
-    void ability() {};
-    
-    Ship(int r, int x, int y) : player(r, x, y) {}
-    ~Ship(){}
-
-    int getHP(){
-        return hp;
-    }
-    void setHP(int h){
-        hp = h;
-    }
-
-    int getSPD(){
-        return spd;
-    }
-    void setSPD(int s){
-        spd = s;
-    }
-
-    int getFireRate(){
-        return fireRate;
-    }
-    void setFireRate(int fr){
-        fireRate = fr;
-    }
-
-    
 };
