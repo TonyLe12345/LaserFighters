@@ -1,0 +1,60 @@
+#pragma once
+
+//MAKES CODE MORE MODULAR AND READABLE
+
+#define SCREEN_WIDTH 1000
+#define SCREEN_HEIGHT 600
+
+//STARTING COORDINATE POINTS FOR PLAYER AND HP
+#define P1_X_COORD 500
+#define P1_Y_COORD 50
+#define P2_X_COORD 500
+#define P2_Y_COORD 550
+
+#define P2_HP_X_COORD SCREEN_WIDTH-115
+#define P2_HP_Y_COORD SCREEN_HEIGHT-86
+#define P1_HP_X_COORD 38
+#define P1_HP_Y_COORD 85
+
+// FREQUENTLY USED DATA MEMEBERS
+
+#define FLEA_HITBOX_RADIUS 15
+#define GOLIATH_HITBOX_RADIUS 40
+#define ARACHNE_HITBOX_RADIUS 30 
+
+#define FLEA_HEALTH 20
+#define GOLIATH_HEALTH 200
+#define ARACHNE_HEALTH 100
+
+#define FLEA_SPEED 20
+#define GOLIATH_SPEED 8
+#define ARACHNE_SPEED 10
+
+#define FLEA_FIRERATE 150
+#define GOLIATH_FIRERATE 300
+#define ARACHNE_FIRERATE 120
+
+
+
+//FILE PATHS
+
+#define MAIN_MENU_BACKGROUND_FILEPATH "Assets/Main_Menu_1000_600_title.jpg"
+
+#define PLAY_SCREEN_BACKGROUND_FILEPATH "Assets/PlayBackground.jpg"
+
+#define CHARACTER_SELECT_BACKGROUND_FILEPATH_P1 "Assets/char_select_P1.png"
+#define CHARACTER_SELECT_BACKGROUND_FILEPATH_P2 "Assets/char_select_P2.png"
+
+#define MAIN_MENU_TITLE_PATH "Assets/Title.jpg"
+
+#define GOLIATH_PATH "Assets/lf_goliath_white.png"
+
+#define FLEA_PATH "Assets/lf_flea_white.png"
+
+#define ARACHNE_PATH "Assets/lf_arachne_white.png"
+
+#define GAMEOVER_FONT_PATH "Assets/MAGNETOB.TTF"
+
+
+
+

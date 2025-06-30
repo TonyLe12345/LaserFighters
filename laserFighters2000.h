@@ -1,15 +1,31 @@
+#pragma once
 #include <SFML/Graphics.hpp>
-using namespace sf;
+#include "GameState.h"
 #include "player.h"
+#include "Game.h"
+#include <string>
+#include "Ship.h"
 
-class laserFighters2000
+
+
+class laserFighters2000 : public GameState
 {
+public:
+    laserFighters2000(GameDataRef data, int x, int y, std::string title, int _player1CharacterIndex, int _player2CharacterIndex);
+    ~laserFighters2000();
+
+    void Init();
+    void HandleInput();
+    void Update(float frameRate);
+    void Draw(float frameRate);
+
+
 private:
-    RenderWindow* windo;
+    GameDataRef _data;
+    sf::RenderWindow* windo;
     player* player1;
     player* player2;
-public:
-    laserFighters2000(int x, int y, std::string title);
-    void run(int x);
-    ~laserFighters2000();
+    sf::Sprite _background;
+    int _player1CharacterIndex;;
+    int _player2CharacterIndex;;
 };
